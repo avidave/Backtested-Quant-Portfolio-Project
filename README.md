@@ -3,7 +3,7 @@
 Group project for **Financial Data Analytics** (Prof. Huang, University of Waterloo).
 The project designs, backtests, and evaluates a cross-sectional equity "factor" strategy —
 the same broad approach used by quant funds to systematically pick stocks — on a universe
-of S&P 1500 stocks, following the course's Quantitative Trading Strategy guidelines.
+of S&P 1500 stocks, following the factor theory (CAPM, Fama-French, Fama-Macbeth regressions, etc.) we learned in class.
 
 ## What is this project, in plain terms?
 
@@ -165,20 +165,6 @@ result in quantitative finance for a few reasons:
   out-of-sample would have lost an investor money (or at least failed to deliver on its
   promise) in real life — so an insignificant out-of-sample result is a genuinely
   informative (if underwhelming) outcome, not a failure of the analysis.
-- **It suggests next steps rather than a dead end.** A natural continuation would be to
-  test the decile portfolios' Sharpe ratio, CAPM alpha, and Fama-French 3-factor alpha (as
-  the assignment suggests) to see if the strategy earned risk-adjusted excess return even
-  without a "significant" long/short spread, and to check whether performance was
-  concentrated in a subset of the out-of-sample period rather than spread evenly across it.
-
-## Files
-
-| File | Description |
-|---|---|
-| `CFM_Final_Group_Project_Code.ipynb` | Full analysis notebook (data loading, factor construction, Fama-MacBeth estimation, portfolio backtest) |
-| `financialdataanlytics_project.pdf` | Original assignment/guidelines from the instructor |
-| `cumulative_hedge_returns.png` | Out-of-sample cumulative return chart for both hedge portfolio methods |
-| Project report (submitted separately) | Write-up covering factor rationale, in-sample/out-of-sample results, and conclusions |
 
 ## How to run
 
@@ -201,8 +187,3 @@ result in quantitative finance for a few reasons:
 - Both long/short decile hedge portfolios were statistically insignificant out-of-sample
   (p > 0.2), despite several factors showing strong in-sample significance — a reminder
   that in-sample factor significance doesn't guarantee out-of-sample profitability.
-- The full performance-analytics suite suggested by the assignment (Sharpe ratio, CAPM
-  alpha, Fama-French 3-factor alpha, information ratio) is not yet computed in the current
-  notebook version — only raw hedge-portfolio returns, the long/short t-tests, and
-  cumulative return plots are produced. See the project report for any additional reported
-  figures.
